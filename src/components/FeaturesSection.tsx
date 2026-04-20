@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
 import { Zap, Shield, Eye, Wrench, Wifi, BarChart3 } from "lucide-react";
-import featureImage from "@/assets/claw-machine-feature.jpg";
+import pic1 from "@/assets/pic1.png";
+import pic3 from "@/assets/pic3.png";
+import pic2 from "@/assets/pic2.png";
 
 const features = [
   { icon: Zap, title: "Precision Claw Mechanics", desc: "Servo-driven claw with adjustable grip strength and programmable win ratios." },
@@ -33,21 +35,27 @@ const FeaturesSection = () => {
           </p>
         </motion.div>
 
-        {/* Feature image */}
+        {/* Feature images */}
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
-          className="mb-16 rounded-2xl overflow-hidden border border-border glow-cyan"
+          className="mb-16 grid grid-cols-3 gap-4"
         >
-          <img
-            src={featureImage}
-            alt="ClawVault claw machine in arcade environment"
-            width={1920}
-            height={1080}
-            loading="lazy"
-            className="w-full h-64 md:h-96 object-cover"
-          />
+          {[
+            { src: pic1, alt: "ClawVault image 1" },
+            { src: pic3, alt: "ClawVault image 3" },
+            { src: pic2, alt: "ClawVault image 2" },
+          ].map((img, i) => (
+            <div key={i} className="rounded-2xl overflow-hidden border border-border glow-cyan">
+              <img
+                src={img.src}
+                alt={img.alt}
+                loading="lazy"
+                className="w-full h-64 md:h-96 object-cover"
+              />
+            </div>
+          ))}
         </motion.div>
 
         {/* Feature grid */}

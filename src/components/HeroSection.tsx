@@ -46,7 +46,7 @@ const HeroSection = () => {
               "radial-gradient(ellipse 75% 75% at 50% 50%, black 30%, transparent 80%)",
           }}
         >
-          <source src="/BMOtransition2.mp4" type="video/mp4" />
+          <source src="/BMOtransition6.mp4" type="video/mp4" />
         </video>
 
         {/* Background glow effects */}
@@ -55,12 +55,12 @@ const HeroSection = () => {
           <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-secondary/10 rounded-full blur-[120px]" />
         </div>
 
-        <div className="container mx-auto px-4 flex flex-col items-center text-center relative z-10">
+        <div className="container mx-auto px-4 flex flex-col items-end text-right relative z-10 pr-24">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, x: 40 }}
+            animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
-            className="space-y-6 max-w-3xl"
+            className="space-y-6 max-w-lg"
           >
             <div className="inline-block px-4 py-1.5 rounded-full border border-primary/30 bg-primary/5">
               <span className="text-primary text-sm font-medium">Premium Arcade Equipment</span>
@@ -73,7 +73,7 @@ const HeroSection = () => {
               ClawVault delivers next-generation claw machines engineered for maximum engagement,
               stunning aesthetics, and unmatched reliability. Built for arcades, malls, and entertainment venues worldwide.
             </p>
-            <div className="flex flex-wrap gap-4 justify-center">
+            <div className="flex flex-wrap gap-4 justify-end">
               <Button asChild size="lg" className="glow-cyan font-heading">
                 <Link to="/product">
                   Explore Product <ArrowRight className="ml-2 h-4 w-4" />

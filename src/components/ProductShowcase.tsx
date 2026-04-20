@@ -2,7 +2,6 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ShoppingCart, Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import productImage from "@/assets/claw-machine-product.jpg";
 import clawDetail from "@/assets/claw-detail.jpg";
 
 const specs = [
@@ -43,24 +42,15 @@ const ProductShowcase = () => {
             className="space-y-6"
           >
             <div className="rounded-2xl overflow-hidden border border-border glow-cyan">
-              <img
-                src={productImage}
-                alt="ClawVault Pro X1 claw machine"
-                width={1024}
-                height={1024}
-                loading="lazy"
+              <video
+                autoPlay
+                muted
+                loop
+                playsInline
                 className="w-full"
-              />
-            </div>
-            <div className="rounded-xl overflow-hidden border border-border">
-              <img
-                src={clawDetail}
-                alt="ClawVault precision claw mechanism close-up"
-                width={1024}
-                height={768}
-                loading="lazy"
-                className="w-full h-48 object-cover"
-              />
+              >
+                <source src="/construction.mp4" type="video/mp4" />
+              </video>
             </div>
           </motion.div>
 
